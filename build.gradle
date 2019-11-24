@@ -2,5 +2,5 @@ plugins {
     id 'java-library'
 }
 
-group = 'controlp5'
+group = 'controlP5'
 version = '2.2.6'
