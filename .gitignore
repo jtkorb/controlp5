@@ -9,3 +9,7 @@
 .buildpath
 .classpath
 .project
+
+/.gradle
+/build
+/tmp
