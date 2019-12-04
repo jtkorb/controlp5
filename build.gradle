@@ -14,44 +14,9 @@ sourceSets {
     }
 }
 
-compileJava {
-//    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
-}
-
-task compileOne (type: JavaCompile) {
-    source = sourceSets.main.java.srcDirs
-    include 'controlP5/ControlWindow.java'
-    classpath = sourceSets.main.compileClasspath
-
-    println "compileOne path = $path"
-
-//    println sourceSets.main.properties
-//.sort{it.key}
-//.collect{it}
-//.findAll{!['class', 'active'].contains(it.key)}
-//.join('\n')
-
-//    destinationDir = sourceSets.main.output.classesDir
-    destinationDir = file(sourceSets.main.java.srcDirs.first().absolutePath+'/metamodel')
-    println destinationDir
- }
-
-compileOne.options.sourcepath = files("$projectDir/src/main/java")
-
 dependencies {
-//    api files('libraries/pde.jar')
-//    api files('libraries/core.jar')
     implementation 'org.processing:core:3.0.2'
 }
 
 group = 'controlP5'
 version = '2.2.6'
-
-println "In build.gradle..."
-println "path = $rootProject.path"
-
-def x = project.getPath()
-println "other path = $x"
-
-x = getPath()
-println "still other path = $x"
