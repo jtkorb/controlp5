@@ -13,3 +13,7 @@
 .project
 .idea
 notes.md
+
+/.gradle
+/build
+/tmp
